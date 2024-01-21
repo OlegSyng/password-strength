@@ -31,24 +31,24 @@
     <div
       class="w-4 h-8 bg-slate-200 rounded-sm"
       [ngClass]="{ 
-        'bg-red-500': strength === strengthEnum.Easy || value.length > 0 && value.length <= 8,
-        'bg-yellow-500': strength === strengthEnum.Medium,
-        'bg-green-500': strength === strengthEnum.Strong,
+        '!bg-red-500': strength === strengthEnum.Easy || value.length > 0 && value.length <= 8,
+        '!bg-yellow-500': strength === strengthEnum.Medium,
+        '!bg-green-500': strength === strengthEnum.Strong,
         }"
     ></div>
     <div
       class="w-4 h-16 bg-slate-200 rounded-sm"
       [ngClass]="{ 
-        'bg-red-500': value.length > 0 && value.length <= 8,
-        'bg-yellow-500': strength === strengthEnum.Medium,
-        'bg-green-500': strength === strengthEnum.Strong,
+        '!bg-red-500': value.length > 0 && value.length <= 8,
+        '!bg-yellow-500': strength === strengthEnum.Medium,
+        '!bg-green-500': strength === strengthEnum.Strong,
       }"
     ></div>
     <div
       class="w-4 h-24 bg-slate-200 rounded-sm"
       [ngClass]="{ 
-        'bg-red-500': value.length > 0 && value.length <= 8,
-        'bg-green-500': strength === strengthEnum.Strong,
+        '!bg-red-500': value.length > 0 && value.length <= 8,
+        '!bg-green-500': strength === strengthEnum.Strong,
     }"
     ></div>
   </div>
