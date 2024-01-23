@@ -1,0 +1,19 @@
+<label 
+  for="password" 
+  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+  [ngClass]="{'text-red-700': hasError}"
+>
+  Password
+</label>
+<input 
+  id="password"
+  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+  [ngClass]="{'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500': hasError}"
+  [(ngModel)]="password" 
+  (ngModelChange)="onPasswordChange($event)" 
+  (blur)="onTouched()" 
+  placeholder="John" 
+/>
+<p *ngIf="hasError" class="mt-2 text-sm text-red-600 dark:text-red-500">
+  <span class="font-medium">Oh, snapp!</span> Password must not contain space characted.
+</p>
